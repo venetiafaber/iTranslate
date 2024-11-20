@@ -1,0 +1,95 @@
+/*
+  CSS for         :     SearchLanguage.js
+  Created by      :     Venetia Faber
+  
+*/
+
+.search-language {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.search-language input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-language input:focus {
+  box-shadow: 0 0 10px rgba(0, 120, 255, 0.4);
+}
+
+.search-results {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-item:hover {
+  background-color: #f0f0f0;
+}
+
+.language-item span:first-child {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.tooltip {
+  font-size: 12px;
+  color: gray;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.language-preview {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.language-preview h2 {
+  margin-bottom: 15px;
+}
+
+.language-preview p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.search-results > div {
+  margin-bottom: 10px;
+}
