@@ -1,0 +1,208 @@
+:root {
+  --dark-gray: #242c33;
+  --white: white;
+  /* --itranslate-blue: #1a98ff; */
+  --itranslate-blue: #0654b3;
+  --ultralight-gray: #f2f5f7;
+  --light-gray: #d2d6d9;
+  --medium-gray: #919699;
+  --dark-gray: #444444;
+  --soft-white: #fcfcfc;
+  --superlight-gray: #e3e6e8;
+  --typeright-purple: #73f;
+  --voice-purple: #b367ff;
+  --light-blue: #59ecff;
+  --black: black;
+  --typeright-teal: #00c6d9;
+  --transparent-blue: #1a98ff26;
+}
+
+.language-map {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+
+.language-map .header {
+  text-align: center;
+}
+
+.language-map .header.applegradient {
+  background-image: linear-gradient(to right, #827ffa, #21e4e6);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.language-map .applegradient {
+  text-align: left;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #827ffa, #21e4e6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+
+.language-map h1,
+.language-map h2 {
+  letter-spacing: 0.62px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: SF Pro Display, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.language-map .normaltext {
+  letter-spacing: -0.46px;
+  justify-content: center;
+  width: 450px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 27px;
+  display: block;
+  font-weight: 500;
+}
+
+.open-translator-btn {
+  z-index: 10;
+  text-align: center;
+  background-image: linear-gradient(to right, #827ffa, #21e4e6);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 65px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
+}
+
+.open-translator-btn:hover {
+  background-color: #004999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.open-translator-btn:active {
+  background-color: #003f88;
+  transform: scale(1);
+}
+
+.open-translator-btn .get-access-text {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.37px;
+  font-size: 34px;
+  text-decoration: none;
+}
+
+.open-translator-btn .rapidapi---button-shadow {
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+}
+
+.open-translator-btn:hover .rapidapi---button-shadow {
+  opacity: 0.3;
+}
+
+.language-map body {
+  color: var(--dark-gray);
+  font-family: SF Pro Text, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.42em;
+}
+
+.map-container {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.default-geo {
+  fill: #d6d6da;
+  outline: none;
+  transition: fill 0.3s ease;
+}
+
+.default-geo:hover {
+  fill: var(--itranslate-blue);
+}
+
+.default-geo:active {
+  fill: var(--itranslate-blue);
+}
+
+.language-map .tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transform: translateY(10px);
+}
+
+.language-map .tooltip-positioned {
+  position: absolute;
+  top: var(--tooltip-top, 0);
+  left: var(--tooltip-left, 0);
+}
+
+.language-map .tooltip h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--itranslate-blue);
+}
+
+.language-map .tooltip ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-map .tooltip ul li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--dark-gray);
+}
+
+.language-map .tooltip-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

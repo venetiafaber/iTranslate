@@ -1,22 +1,27 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import SearchLanguage from './components/SearchLanguage.js';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SupportedLanguages from "./components/SupportedLanguages";
 
-import logo from './assets/images/itranslate-logo.svg';
+import logo from "./assets/images/itranslate-logo.svg";
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="itranslate logo" />
-          <h1>Welcome to iTranslate</h1>
-        </header>
-        <SearchLanguage />
+          <h1 className="text-center">Welcome to iTranslate</h1>
+        </header> */}
+
+        
+        {/* defines routes */}
+        <Routes>
+          <Route path="/supportedlanguages" element={<SupportedLanguages />} />
+        </Routes>
+
       </div>
     </BrowserRouter>
-
   );
 }
 

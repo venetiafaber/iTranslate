@@ -62,7 +62,7 @@ export default function SearchLanguage() {
 
   return (
     <div className="search-language">
-      <h1>Language Search</h1>
+      <h2 className="applegradient">Search Language</h2>
       <input
         type="text"
         placeholder="Search for a language..."
@@ -85,7 +85,7 @@ export default function SearchLanguage() {
       )}
       {selectedLanguage && (
         <div className="language-preview">
-          <h2>{selectedLanguage.name} Preview</h2>
+          <h3>{selectedLanguage.name} Preview</h3>
           <p>{selectedLanguage.sampleTranslation}</p>
           <p><strong>English Translation:</strong> {selectedLanguage.englishMeaning}</p>
         </div>
