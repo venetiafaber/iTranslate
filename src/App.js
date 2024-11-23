@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SupportedLanguages from "./components/SupportedLanguages";
 
 import logo from "./assets/images/itranslate-logo.svg";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {

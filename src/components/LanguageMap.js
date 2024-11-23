@@ -71,7 +71,7 @@ const LanguageMap = () => {
     setLanguages(countryLanguages[countryName] || []);
     setTooltipStyle({
       top: event.clientY + 10,
-      left: event.clientX - 150,
+      left: event.clientX - 70,
     });
   };
 
