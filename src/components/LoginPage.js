@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import logo from '../assets/images/itranslate-logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import Header from "./Header.js";
 
 const LoginPage = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -17,10 +16,11 @@ const LoginPage = () => {
     };
 
     return (
-        <>
-            <Header />
-            <div className="login-container d-flex justify-content-center align-items-center mt-5 mb-5">
-                <div className="card p-4 shadow col-4">
+        <div className="pt-5 pb-5" style={{
+            background: "linear-gradient(135deg, #a2c9f2, #5b99e4, #1aa6e4)",
+        }}>
+            <div className="container d-flex justify-content-center align-items-center">
+                <div className="card p-4 shadow col-12 col-sm-8 col-md-6 col-lg-5">
                     <div className="text-center">
                         <img
                             src={logo}
@@ -77,7 +77,7 @@ const LoginPage = () => {
                             </div>
                         </div>
                         <div className="text-end m-3">
-                            <a href="*" className="text-decoration-none">
+                            <a href="*" className="text-decoration-none text-muted">
                                 Forgot password?
                             </a>
                         </div>
@@ -93,7 +93,7 @@ const LoginPage = () => {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

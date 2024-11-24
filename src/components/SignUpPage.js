@@ -5,7 +5,6 @@
 
 import React, { useState } from "react";
 import logo from "../assets/images/itranslate-logo.svg";
-import Header from "./Header.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,10 +21,11 @@ const SignupPage = () => {
   };
 
   return (
-    <>
-      <Header />
-      <div className="signup-container d-flex justify-content-center align-items-center mt-5 mb-5">
-        <div className="card p-4 shadow col-4">
+    <div className="pt-5 pb-5" style={{
+      background: "linear-gradient(135deg, #a2c9f2, #5b99e4, #1aa6e4)",
+    }}>
+      <div className="container d-flex justify-content-center align-items-center">
+        <div className="card p-4 shadow col-12 col-sm-8 col-md-6 col-lg-5">
           <div className="text-center">
             <img
               src={logo}
@@ -139,7 +139,7 @@ const SignupPage = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
