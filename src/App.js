@@ -6,6 +6,8 @@ import SignUpPage from "./components/SignUpPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   return (
@@ -15,9 +17,10 @@ function App() {
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/supportedlanguages" element={<SupportedLanguages />} />
-        <Route path="*" element={<h1 className="text-center">404 - Page Not Found</h1>} />
+        <Route path="/supported-languages" element={<SupportedLanguages />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

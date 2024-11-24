@@ -1,5 +1,5 @@
 /*
-  React Component :     SigUpPage.js
+  React Component :     SignUpPage.js
   Created by      :     Yash Jigneshkumar Patel
 */
 
