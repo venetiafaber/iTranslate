@@ -1,3 +1,10 @@
+/*
+  React Component :     LanguageMap.js
+  Created by      :     Venetia Faber
+  
+*/
+
+
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { Link } from "react-router-dom";

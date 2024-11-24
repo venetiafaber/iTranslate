@@ -1,0 +1,47 @@
+/*
+  CSS for         :     Header.js
+  Created by      :     Venetia Faber
+  
+*/
+
+:root {
+  --dark-gray: #242c33;
+  --white: white;
+  /* --itranslate-blue: #1a98ff; */
+  --itranslate-blue: #0654b3;
+  --ultralight-gray: #f2f5f7;
+  --light-gray: #d2d6d9;
+  --medium-gray: #919699;
+  --dark-gray: #444444;
+  --soft-white: #fcfcfc;
+  --superlight-gray: #e3e6e8;
+  --typeright-purple: #73f;
+  --voice-purple: #b367ff;
+  --light-blue: #59ecff;
+  --black: black;
+  --typeright-teal: #00c6d9;
+  --transparent-blue: #1a98ff26;
+}
+
+.header-container {
+  background-color: var(--soft-white);
+  padding: 15px 20px;
+  color: var(--itranslate-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+  justify-content: start;
+}
+
+
+@media (max-width: 895px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .logo {
+      margin-bottom: 10px; 
+    }
+}

@@ -1,3 +1,9 @@
+/*
+  React Component :     ReviewsCarousel.js
+  Created by      :     Venetia Faber
+  
+*/
+
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "../assets/css/ReviewsCarousel.css";
