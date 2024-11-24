@@ -1,5 +1,5 @@
 /*
-  CSS for         :     Header.js
+  CSS for         :     Nav.js
   Created by      :     Venetia Faber
   
 */
@@ -25,7 +25,10 @@
 
 .nav-container {
   display: flex;
-  /* margin-left: 50px; */
+  justify-content: space-between; 
+  align-items: center;
+  gap: 20px;
+  width: 100%
 }
 
 .nav-list {
@@ -33,8 +36,7 @@
   gap: 30px;
   list-style: none;
   padding: 0;
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  flex-grow: 1; 
 }
 
 .nav-item {
@@ -45,6 +47,39 @@
   display: flex;
   cursor: pointer;
   padding: 20px 0;
+}
+
+.sign-in-item {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.sign-in-link {
+  background-color: var(--itranslate-blue);
+  /* background-image: linear-gradient(to right, #827ffa, #21e4e6); */
+  color: var(--soft-white);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-weight: 800;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sign-in-link:hover {
+  transform: scale(1.05);
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: var(--itranslate-blue);
+  cursor: pointer;
 }
 
 .menu-item {
@@ -60,11 +95,12 @@
 }
 
 .dropdown-container {
-  z-index: 10000;
+  z-index: 1000;
   display: none; /* none */
   flex-direction: column;
   position: absolute;
   top: 50px;
+  /* right: 0; */
   background-color: var(--soft-white);
   text-align: center;
   border: 1px solid #e8e9ef;
@@ -155,13 +191,12 @@
   text-decoration: none !important;
 }
 
-.other-apps-dropdown-arrow-right
-{
+.other-apps-dropdown-arrow-right {
   padding-left: 3px !important;
 }
 
 .other-apps-dropdown-right {
-  font-size: 0.8em; 
+  font-size: 0.8em;
 }
 
 /* .other-apps-link:hover .sub-dropdown,
@@ -176,10 +211,76 @@
 } */
 
 
+@media (max-width: 895px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
 
-
-@media (max-width: 768px) {
-  .nav-menu {
+  .nav-list {
     display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 20px;
+    background-color: var(--soft-white);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-height: calc(68vh - 60px);
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .sign-in-item {
+    margin-left: 0;
+    width: 100%;
+    align-self: flex-start;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .sign-in-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+
+  .nav-item {
+    padding: 8px auto;
+  }
+
+  .dropdown-container {
+    display: none;
+    left: 10%;
+    top: 10%;
+  }
+
+  .nav-item:hover .dropdown-container,
+  .dropdown-container:hover {
+    display: flex;
+  }
+
+  .sub-dropdown {
+    display: none;
+  }
+
+  .sub-dropdown.show {
+    display: flex;
   }
 }
