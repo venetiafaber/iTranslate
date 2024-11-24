@@ -23,6 +23,9 @@ const Header = () => {
         </Link>
       </div>
       <Nav />
+      {/* <div className="sign-in">
+        <Link to="/sign-in" className="sign-in-link">Sign In</Link>
+      </div> */}
     </header>
   );
 };

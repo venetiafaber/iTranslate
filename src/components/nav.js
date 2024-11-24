@@ -1,5 +1,5 @@
 /*
-  React Component :     Header.js
+  React Component :     Nav.js
   Created by      :     Venetia Faber
   
 */
@@ -15,14 +15,28 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Nav = () => {
   // defines states
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
 
+  // function to toggle subdropdown in other apps
   const toggleSubDropdown = (subDropdown) => {
     setActiveSubDropdown((prev) => (prev === subDropdown ? null : subDropdown));
   };
 
+  // function to toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen); // toggle mobile menu visibility
+  };
+
   return (
     <nav className="nav-container">
-      <ul className="nav-list">
+
+      {/* hamburger menu button for mobile view */}
+      <button className="hamburger-menu" onClick={toggleMobileMenu}>
+        &#9776;
+      </button>
+
+
+      <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
         <li className="nav-item">
           {/* <div className="menu-item">Features</div> */}
           <div className="dropdown-container">
@@ -112,7 +126,16 @@ const Nav = () => {
           </div>
           Company
         </li>
+
+        {/* sign-in button */}
+        {/* <li className="nav-item sign-in-item">
+          <Link to="/sign-in" className="sign-in-link">Sign In</Link>
+        </li> */}
+
       </ul>
+      <div className="nav-item sign-in-item">
+      <Link to="/sign-in" className="sign-in-link">Sign In</Link>
+      </div>
     </nav>
   );
 };
