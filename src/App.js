@@ -8,13 +8,14 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NotFoundPage from "./components/NotFoundPage";
+import Home from "./components/HomePage";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/supported-languages" element={<SupportedLanguages />} />

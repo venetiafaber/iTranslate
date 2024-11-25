@@ -1,0 +1,153 @@
+.home-header {
+    background: linear-gradient(
+      to bottom,
+      #0654b3,
+      #59ecff 50%,
+      #ffffff 100%
+    );
+    color: var(--white);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .home-header-content {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 2rem;
+    text-align: left;
+  }
+  
+  .home-header-video {
+    flex: 1;
+    max-width: 40%;
+    position: relative;
+  }
+  
+  .home-video {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  .home-title {
+    font-size: 4.5rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    color: #242C33;
+  }
+  
+  .home-title .home-highlight {
+    color: var(--soft-white);
+  }
+  
+  .home-stars {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #ffcc00; /* Yellow color for stars */
+  }
+  
+  .home-subtitle {
+    font-size: 1.2rem;
+    color: var(--white);
+  }
+  
+  .home-download-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .home-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-btn.home-app-store {
+    background-color: var(--typeright-teal);
+    color: var(--white);
+  }
+  
+  .home-btn.home-play-store {
+    background-color: var(--voice-purple);
+    color: var(--white);
+  }
+  
+  .home-features {
+    background-color: var(--soft-white);
+    padding: 2rem 1rem;
+  }
+  
+  .home-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .home-feature {
+    padding: 1rem;
+    border: 1px solid var(--superlight-gray);
+    border-radius: 8px;
+    background-color: var(--ultralight-gray);
+    text-align: center;
+  }
+  
+  .home-feature h3 {
+    color: var(--itranslate-blue);
+  }
+  
+  .home-feature p {
+    color: var(--medium-gray);
+  }
+  
+  .home-feature-image {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto 1rem;
+    display: block;
+    border-radius: 8px;
+  }
+  
+
+  .mockup-video-device {
+    position: relative;
+    width: 400px; /* Adjust based on the frame size */
+    height: 800px; /* Match the frame's proportions */
+    margin: 10px;
+  }
+  
+  .mockup-video-device-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .mockup-frame {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .mockup-video-device-container {
+    position: absolute;
+    top: 5%; /* Adjust to fit video inside the frame */
+    left: 5%; /* Adjust to fit video inside the frame */
+    width: 90%; /* Resize video to fit inside the frame */
+    height: 90%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 20px; /* Optional: Make video corners rounded */
+  }
+  
+  .mockup-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
