@@ -13,36 +13,7 @@ import "../assets/css/LanguageMap.css";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-// // country-language mapping
-// const countryLanguages = {
-//   "United States of America": ["English", "Spanish"],
-//   France: ["French"],
-//   Spain: ["Spanish"],
-//   Germany: ["German"],
-//   India: ["Hindi", "English"],
-//   China: ["Mandarin"],
-//   Canada: ["English", "French"],
-//   Australia: ["English"],
-//   Brazil: ["Portuguese"],
-//   Russia: ["Russian"],
-//   Japan: ["Japanese"],
-//   "South Korea": ["Korean"],
-//   Italy: ["Italian"],
-//   Mexico: ["Spanish"],
-//   "United Kingdom": ["English"],
-//   "Saudi Arabia": ["Arabic"],
-//   Egypt: ["Arabic"],
-//   Argentina: ["Spanish"],
-//   "South Africa": ["English", "Afrikaans"],
-//   Pakistan: ["Urdu", "Punjabi"],
-//   Netherlands: ["Dutch"],
-//   Sweden: ["Swedish"],
-//   Belgium: ["Dutch", "French", "German"],
-//   Kenya: ["English", "Swahili"],
-//   Chile: ["Spanish"],
-//   Nigeria: ["English", "Hausa", "Yoruba", "Igbo"],
-//   Philippines: ["Spanish"],
-// };
+
 
 const LanguageMap = () => {
   const [hoveredCountry, setHoveredCountry] = useState(null);
