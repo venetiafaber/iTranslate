@@ -5,7 +5,6 @@
 */
 
 :root {
-  --dark-gray: #242c33;
   --white: white;
   /* --itranslate-blue: #1a98ff; */
   --itranslate-blue: #0654b3;
@@ -42,7 +41,7 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 1.2em;
-  color: var(--itranslate-blue)
+  color: var(--itranslate-blue);
 }
 
 .review-card {
@@ -84,8 +83,8 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: transparent;
-  filter: none; 
-  color: var(--itranslate-blue); 
+  filter: none;
+  color: var(--itranslate-blue);
 }
 
 .carousel-control-prev-icon::before,
@@ -93,7 +92,7 @@
   border-style: solid;
   border-width: 8px 8px 0 0;
   font-size: 24px;
-  color: var(--itranslate-blue); 
+  color: var(--itranslate-blue);
   border-color: var(--itranslate-blue) transparent transparent transparent;
 }
 
@@ -102,14 +101,9 @@
   border-style: solid;
   border-width: 8px 8px 0 0;
   font-size: 24px;
-  color: var(--itranslate-blue); 
+  color: var(--itranslate-blue);
 }
 
 .carousel-indicators {
   color: var(--itranslate-blue) !important;
 }
-
-
-
-
-
