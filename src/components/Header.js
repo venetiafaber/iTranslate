@@ -7,7 +7,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Header.css";
-import logo from "../assets/images/itranslate-logo.svg";
+import logo from "../assets/images/itranslate-logo1.png";
 import Nav from "./nav";
 
 const Header = () => {
