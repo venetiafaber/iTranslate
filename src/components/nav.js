@@ -12,7 +12,8 @@ import logo from "../assets/images/itranslate-logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-const Nav = () => {
+
+export default function Nav () {
   // defines states
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
@@ -27,18 +28,26 @@ const Nav = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen); // toggle mobile menu visibility
   };
 
+ 
   return (
     <nav className="nav-container">
 
       {/* hamburger menu button for mobile view */}
       <button className="hamburger-menu" onClick={toggleMobileMenu}>
+      {/* <button className="hamburger-menu"> */}
         &#9776;
       </button>
 
+      {/* Hidden checkbox for mobile menu toggle */}
+      {/* <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+      <label htmlFor="menu-toggle" className="hamburger-menu">
+        &#9776;
+      </label> */}
+
 
       <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
+      {/* <ul className="nav-list"> */}
         <li className="nav-item">
-          {/* <div className="menu-item">Features</div> */}
           <div className="dropdown-container">
             <Link to="/features/text-translation" className="dropdown-link">
               Text Translation
@@ -128,16 +137,17 @@ const Nav = () => {
         </li>
 
         {/* sign-in button */}
-        {/* <li className="nav-item sign-in-item">
+        <li className="nav-item sign-in-item">
           <Link to="/sign-in" className="sign-in-link">Sign In</Link>
-        </li> */}
+        </li>
 
       </ul>
-      <div className="nav-item sign-in-item">
+
+      {/* sign-in button */}
+      {/* <div className="nav-item sign-in-item">
       <Link to="/sign-in" className="sign-in-link">Sign In</Link>
-      </div>
+      </div> */}
     </nav>
   );
 };
 
-export default Nav;

@@ -5,7 +5,6 @@
 */
 
 :root {
-  --dark-gray: #242c33;
   --white: white;
   /* --itranslate-blue: #1a98ff; */
   --itranslate-blue: #0654b3;
@@ -27,15 +26,18 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  gap: 20px;
-  width: 100%
+  /* gap: 20px; */
+  width: 100%;
+  background-color: var(--soft-white);
 }
 
 .nav-list {
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
+  gap: 2rem;
   list-style: none;
   padding: 0;
+  margin: 0;
   flex-grow: 1; 
 }
 
@@ -47,6 +49,10 @@
   display: flex;
   cursor: pointer;
   padding: 20px 0;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 .sign-in-item {
@@ -75,27 +81,15 @@
 
 .hamburger-menu {
   display: none;
-  font-size: 30px;
+  font-size: 2rem;
   background: none;
   border: none;
   color: var(--itranslate-blue);
   cursor: pointer;
 }
 
-.menu-item {
-  color: var(--itranslate-blue);
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.dropdown-arrow {
-  margin-left: 5px;
-  font-size: 0.8em;
-}
-
 .dropdown-container {
-  z-index: 1000;
+  z-index: 100;
   display: none; /* none */
   flex-direction: column;
   position: absolute;
@@ -104,7 +98,8 @@
   background-color: var(--soft-white);
   text-align: center;
   border: 1px solid #e8e9ef;
-  border-radius: 16px;
+  /* border-radius: 16px; */
+  border-radius: 8px;
   min-width: 150px;
   margin-top: 10px;
   padding: 15px;
@@ -119,7 +114,6 @@
 .nav-item:hover .dropdown-container,
 .dropdown-container:hover {
   display: flex;
-  /* pointer-events: auto; */
 }
 
 .dropdown-link {
@@ -133,17 +127,23 @@
   padding: 8px 12px;
   text-decoration: none;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .dropdown-link:hover {
   background-color: var(--light-gray);
   border-radius: 5px;
-  color: var(--black);
+  color: var(--itranslate-blue);
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+  font-size: 0.8em;
 }
 
 .sub-dropdown {
   display: none; /* display: none; */
-  z-index: 10000;
+  z-index: 100;
   flex-direction: column;
   position: absolute;
   top: 0;
@@ -179,7 +179,7 @@
 .sub-dropdown .dropdown-link:hover {
   background-color: var(--light-gray);
   border-radius: 5px;
-  color: var(--black);
+  color: var(--itranslate-blue);
 }
 
 .company-container .dropdown-link {
@@ -220,19 +220,18 @@
 
   .nav-list {
     display: none;
-    flex-direction: column;
-    gap: 0;
+    gap: 2rem;
     padding: 0 20px;
     background-color: var(--soft-white);
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    max-height: calc(68vh - 60px);
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+    z-index: 101;
+    /* max-height: calc(68vh - 60px);
+    height: calc(100vh - 60px); */
+    /* overflow-y: auto; */
     align-items: flex-start;
   }
 
@@ -240,13 +239,13 @@
     display: flex;
   }
 
-  .sign-in-item {
+  /* .sign-in-item {
     margin-left: 0;
     width: 100%;
     align-self: flex-start;
     display: block;
     padding-top: 1rem;
-  }
+  } */
 
   .sign-in-link {
     width: 100%;
@@ -258,17 +257,27 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 10000;
+    z-index: 100;
   }
 
   .nav-item {
     padding: 8px auto;
   }
 
+  .menu-toggle:checked + .hamburger-menu + .nav-list {
+    display: flex;
+    max-height: 300px; /* Adjust based on menu content */
+  }
+
   .dropdown-container {
     display: none;
-    left: 10%;
-    top: 10%;
+    left: 0;
+    top: 50%;
+    z-index: 102;
+  }
+
+  .dropdown-link {
+    z-index: 102;
   }
 
   .nav-item:hover .dropdown-container,
@@ -283,4 +292,30 @@
   .sub-dropdown.show {
     display: flex;
   }
+}
+
+@media (max-width: 532px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+
+  .sign-in-item {
+    margin-left: 0;
+    width: 100%;
+    align-self: flex-start;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .dropdown-container {
+    top: 10%;
+    left: 100%;
+    z-index: 102;
+  }
+
 }
