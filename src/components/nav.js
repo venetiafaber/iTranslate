@@ -4,47 +4,110 @@
   
 */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/nav.css";
-import logo from "../assets/images/itranslate-logo.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faChevronDown, faChevronUp,faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Nav() {
+  
   // defines states
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  // function to toggle subdropdown in other apps
+
+  // updates isSmallScreen state on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 600);
+    };
+
+    handleResize(); // check initial screen size
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+  // function to toggle subdropdown in other apps navlink
   const toggleSubDropdown = (subDropdown) => {
     setActiveSubDropdown((prev) => (prev === subDropdown ? null : subDropdown));
   };
 
   // function to toggle mobile menu
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen); // toggle mobile menu visibility
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // function to toggle dropdown
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown((prev) => (prev === dropdown ? null : dropdown));
+  };
+
+  // function to close mobile menu on resize to larger screens
+  const handleResize = () => {
+    if (window.innerWidth > 895) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const closeDropdowns = () => setActiveDropdown(null);
+
+  // closes dropdowns when clicking outside the nav
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.nav-container')) {
+      closeDropdowns();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+
   return (
-    <nav className="nav-container">
+    <nav className="nav-container" onClick={closeDropdowns}>
+
       {/* hamburger menu button for mobile view */}
       <button className="hamburger-menu" onClick={toggleMobileMenu}>
-        {/* <button className="hamburger-menu"> */}
         &#9776;
       </button>
 
-      {/* Hidden checkbox for mobile menu toggle */}
-      {/* <input type="checkbox" id="menu-toggle" className="menu-toggle" />
-      <label htmlFor="menu-toggle" className="hamburger-menu">
-        &#9776;
-      </label> */}
-
       <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
-        {/* <ul className="nav-list"> */}
-        <li className="nav-item">
-          <div className="dropdown-container">
+        
+        {/* Features dropdown */}
+        <li className="nav-item" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="dropdown-trigger"
+            onClick={() => toggleDropdown("features")}
+          >
+            Features
+            <FontAwesomeIcon
+              icon={isSmallScreen
+                ? (activeDropdown === "features" ? faChevronLeft : faChevronRight) // for small screens
+                : (activeDropdown === "features" ? faChevronUp : faChevronDown)} // for larger screens
+              className="dropdown-arrow"
+            />
+          </div>
+          <div
+            className={`dropdown-container ${
+              activeDropdown === "features" ? "show" : ""
+            }`}
+          >
             <Link to="/features/text-translation" className="dropdown-link">
               Text Translation
             </Link>
@@ -61,11 +124,27 @@ export default function Nav() {
               Keyboard Translation
             </Link>
           </div>
-          Features
         </li>
 
-        <li className="nav-item">
-          <div className="dropdown-container">
+        {/* Translating dropdown  */}
+        <li className="nav-item" onClick={(e) => e.stopPropagation()}>
+          <div
+              className="dropdown-trigger"
+              onClick={() => toggleDropdown("translating")}
+            >
+              Translating
+              <FontAwesomeIcon
+              icon={isSmallScreen
+                ? (activeDropdown === "translating" ? faChevronLeft : faChevronRight) // for small screens
+                : (activeDropdown === "translating" ? faChevronUp : faChevronDown)} // for larger screens
+              className="dropdown-arrow"
+            />
+            </div>
+            <div
+              className={`dropdown-container ${
+                activeDropdown === "translating" ? "show" : ""
+              }`}
+            >
             <Link to="/translating/online-translator" className="dropdown-link">
               Online Translator
             </Link>
@@ -76,11 +155,27 @@ export default function Nav() {
               Dictionary
             </Link>
           </div>
-          Translating
         </li>
-
-        <li className="nav-item">
-          <div className="dropdown-container">
+        
+        {/* Learning dropdown  */}
+        <li className="nav-item" onClick={(e) => e.stopPropagation()}>
+          <div
+              className="dropdown-trigger"
+              onClick={() => toggleDropdown("learning")}
+            >
+              Learning
+              <FontAwesomeIcon
+                icon={isSmallScreen
+                  ? (activeDropdown === "learning" ? faChevronLeft : faChevronRight) // for small screens
+                  : (activeDropdown === "learning" ? faChevronUp : faChevronDown)} // for larger screens
+                className="dropdown-arrow"
+              />
+            </div>
+            <div
+              className={`dropdown-container ${
+                activeDropdown === "learning" ? "show" : ""
+              }`}
+            >
             <Link to="/language-learning" className="dropdown-link">
               Language Learning
             </Link>
@@ -88,11 +183,29 @@ export default function Nav() {
               Blog
             </Link>
           </div>
-          Learning
+          
         </li>
 
-        <li className="nav-item">
-          <div className="dropdown-container company-container">
+        {/* Company dropdown  */}
+        <li className="nav-item" onClick={(e) => e.stopPropagation()}>
+          <div
+              className="dropdown-trigger"
+              onClick={() => toggleDropdown("company")}
+            >
+              Company
+              <FontAwesomeIcon
+                icon={isSmallScreen
+                  ? (activeDropdown === "company" ? faChevronLeft : faChevronRight) // for small screens
+                  : (activeDropdown === "company" ? faChevronUp : faChevronDown)} // for larger screens
+                className="dropdown-arrow"
+              />
+            </div>
+            <div
+              className={`dropdown-container company-container ${
+                activeDropdown === "company" ? "show" : ""
+              }`}
+            >
+            
             <Link to="/company/support" className="dropdown-link">
               Support
             </Link>
@@ -103,15 +216,11 @@ export default function Nav() {
                 toggleSubDropdown("otherApps");
               }}
             >
-              {/* <Link to="/company/other-apps" className="dropdown-link other-apps-a"> */}
               Other Apps
-              <span>
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  className="other-apps-dropdown-arrow-right"
-                />
-              </span>
-              {/* </Link> */}
+              <FontAwesomeIcon
+                icon={activeSubDropdown === "otherApps" ? faChevronLeft : faChevronRight}
+                className="sub-dropdown-arrow"
+              />
             </div>
 
             <div
@@ -132,8 +241,7 @@ export default function Nav() {
                 Typeright
               </Link>
             </div>
-          </div>
-          Company
+          </div> 
         </li>
 
         {/* sign-in button */}
@@ -144,10 +252,6 @@ export default function Nav() {
         </li>
       </ul>
 
-      {/* sign-in button */}
-      {/* <div className="nav-item sign-in-item">
-      <Link to="/sign-in" className="sign-in-link">Sign In</Link>
-      </div> */}
     </nav>
   );
 }
