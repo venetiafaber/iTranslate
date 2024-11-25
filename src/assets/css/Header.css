@@ -1,0 +1,69 @@
+/*
+  CSS for         :     Header.js
+  Created by      :     Venetia Faber
+  
+*/
+
+:root {
+  --dark-gray: #242c33;
+  --white: white;
+  /* --itranslate-blue: #1a98ff; */
+  --itranslate-blue: #0654b3;
+  --ultralight-gray: #f2f5f7;
+  --light-gray: #d2d6d9;
+  --medium-gray: #919699;
+  --dark-gray: #444444;
+  --soft-white: #fcfcfc;
+  --superlight-gray: #e3e6e8;
+  --typeright-purple: #73f;
+  --voice-purple: #b367ff;
+  --light-blue: #59ecff;
+  --black: black;
+  --typeright-teal: #00c6d9;
+  --transparent-blue: #1a98ff26;
+}
+
+.header-container {
+  background-color: var(--soft-white);
+  padding: 15px 20px;
+  color: var(--itranslate-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: start;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--soft-white);
+}
+
+/*
+.sign-in {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-link {
+  background-color: var(--itranslate-blue);
+  background-image: linear-gradient(to right, #827ffa, #21e4e6);
+  color: var(--soft-white);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-weight: 800;
+}
+
+.sign-in-link:hover {
+  background-color: #004a9c;
+}
+*/
+
+@media (max-width: 895px) {
+  .logo {
+    margin-bottom: 10px;
+  }
+}

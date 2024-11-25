@@ -1,0 +1,12 @@
+.supported-language-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 532px) {
+    .supported-language-container {
+        gap: 5rem;
+    }
+    
+}
