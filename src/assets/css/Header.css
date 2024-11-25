@@ -63,25 +63,7 @@
 */
 
 @media (max-width: 895px) {
-  .header-container {
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    /* gap: 1.5rem; */
-  }
   .logo {
     margin-bottom: 10px;
   }
-
-  /*
-  .sign-in {
-    margin-left: 0;
-    width: auto;
-    justify-content: center;
-  }
-
-  .sign-in-link {
-    width: 100%;
-    text-align: center;
-  }
-  */
 }

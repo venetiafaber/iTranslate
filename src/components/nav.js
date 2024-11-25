@@ -12,11 +12,10 @@ import logo from "../assets/images/itranslate-logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-
-export default function Nav () {
+export default function Nav() {
   // defines states
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // function to toggle subdropdown in other apps
   const toggleSubDropdown = (subDropdown) => {
@@ -28,13 +27,11 @@ export default function Nav () {
     setIsMobileMenuOpen(!isMobileMenuOpen); // toggle mobile menu visibility
   };
 
- 
   return (
     <nav className="nav-container">
-
       {/* hamburger menu button for mobile view */}
       <button className="hamburger-menu" onClick={toggleMobileMenu}>
-      {/* <button className="hamburger-menu"> */}
+        {/* <button className="hamburger-menu"> */}
         &#9776;
       </button>
 
@@ -44,9 +41,8 @@ export default function Nav () {
         &#9776;
       </label> */}
 
-
       <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
-      {/* <ul className="nav-list"> */}
+        {/* <ul className="nav-list"> */}
         <li className="nav-item">
           <div className="dropdown-container">
             <Link to="/features/text-translation" className="dropdown-link">
@@ -118,7 +114,11 @@ export default function Nav () {
               {/* </Link> */}
             </div>
 
-            <div className={`sub-dropdown ${activeSubDropdown === "otherApps" ? "show" : ""}`}>
+            <div
+              className={`sub-dropdown ${
+                activeSubDropdown === "otherApps" ? "show" : ""
+              }`}
+            >
               <Link to="/converse" className="dropdown-link">
                 Converse
               </Link>
@@ -138,9 +138,10 @@ export default function Nav () {
 
         {/* sign-in button */}
         <li className="nav-item sign-in-item">
-          <Link to="/sign-in" className="sign-in-link">Sign In</Link>
+          <Link to="/sign-in" className="sign-in-link">
+            Sign In
+          </Link>
         </li>
-
       </ul>
 
       {/* sign-in button */}
@@ -149,5 +150,4 @@ export default function Nav () {
       </div> */}
     </nav>
   );
-};
-
+}

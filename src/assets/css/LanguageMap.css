@@ -142,7 +142,8 @@
 
 .map-container {
   width: 80%;
-  height: 400px;
+  /* height: 400px; */
+  height: auto;
   margin: 0 auto;
 }
 
@@ -215,7 +216,9 @@
 @media (max-width: 895px) {
   .language-map {
     top: 60px;
-
+  }
+  .language-map .applegradient {
+    text-align: center;
   }
 }
 
@@ -223,10 +226,23 @@
 @media (max-width: 532px) {
   .language-map {
     top: 200px;
-    max-width: 600px;
-    padding: 0;
+    max-width: 100%;
+    padding: 10px;
     margin: 0;
     height: auto;
+  }
+  .language-map .map-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+  } 
+  /* .language-map h1 {
+    font-size: 32px;  Adjust font size 
+  } */
+  .language-map .normaltext {
+    width: 100%;
+    /* font-size: 16px; */
   }
 }
 

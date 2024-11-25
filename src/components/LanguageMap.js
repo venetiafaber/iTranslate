@@ -4,7 +4,6 @@
   
 */
 
-
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { Link } from "react-router-dom";
@@ -12,8 +11,6 @@ import { Link } from "react-router-dom";
 import "../assets/css/LanguageMap.css";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
-
-
 
 const LanguageMap = () => {
   const [hoveredCountry, setHoveredCountry] = useState(null);

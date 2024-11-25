@@ -7,12 +7,15 @@
 import React from "react";
 import LanguageMap from "./LanguageMap.js";
 import SearchLanguage from "./SearchLanguage.js";
-// import LanguageFactCarousel from "./LanguageFactCarousel.js";
 import ReviewsCarousel from "./ReviewsCarousel.js";
+import Header from "./Header.js";
+import "../assets/css/SupportedLanguages.css";
+
 
 const SupportedLanguages = () => {
   return (
-    <div>
+    <div class="supported-language-container">
+      <Header />
       <LanguageMap />
       <SearchLanguage />
       <ReviewsCarousel />
