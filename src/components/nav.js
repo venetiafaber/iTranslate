@@ -138,7 +138,7 @@ export default function Nav() {
 
         {/* sign-in button */}
         <li className="nav-item sign-in-item">
-          <Link to="/sign-in" className="sign-in-link">
+          <Link to="/login" className="sign-in-link">
             Sign In
           </Link>
         </li>

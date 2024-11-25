@@ -225,7 +225,7 @@
 
 @media (max-width: 532px) {
   .language-map {
-    top: 200px;
+    top: 100px;
     max-width: 100%;
     padding: 10px;
     margin: 0;
@@ -236,13 +236,12 @@
     height: 300px;
     overflow: hidden;
     margin: 0 auto;
+    padding-bottom: 5rem;
   } 
-  /* .language-map h1 {
-    font-size: 32px;  Adjust font size 
-  } */
+ 
   .language-map .normaltext {
     width: 100%;
-    /* font-size: 16px; */
+
   }
 }
 

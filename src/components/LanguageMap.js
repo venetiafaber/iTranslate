@@ -68,7 +68,7 @@ const LanguageMap = () => {
         <div className="rapidapi---button-shadow"></div>
       </a> */}
 
-      <Link to="/translate" className="open-translator-btn">
+      <Link to="/translating/online-translator" className="open-translator-btn">
         <div className="get-access-text">Open Translator link</div>
         <div className="rapidapi---button-shadow"></div>
       </Link>
