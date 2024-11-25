@@ -1,37 +1,64 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMicrophone,
-  faCamera,
-  faKeyboard,
-  faPlane,
-} from "@fortawesome/free-solid-svg-icons";
+
+// Import images dynamically
+import deviceFrame from "../../src/assets/images/device_video_stencil_iphone11pro2x-p-800.png";
+import appStoreBadge from "../../src/assets/images/icons/badge_apple_app_store.svg";
+import playStoreBadge from "../../src/assets/images/icons/badge_google_play_store.svg";
+import voiceIcon from "../../src/assets/images/vt.png";
+import cameraIcon from "../../src/assets/images/ct.png";
+import keyboardIcon from "../../src/assets/images/kt.png";
+import offlineIcon from "../../src/assets/images/ot.png";
+
 import "../../src/assets/css/HomePage.css";
-import device from "../../src/assets/images/device_video_stencil_iphone11pro2x-p-800.png"
 
 const Home = () => {
   return (
     <div className="home">
-      {/* Header */}
+      {/* Hero Section */}
       <header className="home-header">
         <div className="home-header-content">
           <h1 className="home-title">
             Instantly speak <span className="home-highlight">100+ languages</span>
           </h1>
           <div className="home-stars">★★★★★</div>
-          <p className="home-subtitle">I love and rely on this app!</p>
+          <p className="home-subtitle">Been using this for years!</p>
+          <p className="home-review-author">María O.</p>
+
+          {/* Icons Row */}
+          <div className="home-icons-row">
+            <div className="home-icon-item">
+              <img src={voiceIcon} alt="Voice Translation" className="home-icon-image" />
+             
+            </div>
+            <div className="home-icon-item">
+              <img src={cameraIcon} alt="Camera Translation" className="home-icon-image" />
+              
+            </div>
+            <div className="home-icon-item">
+              <img src={keyboardIcon} alt="Keyboard Translation" className="home-icon-image" />
+             
+            </div>
+            <div className="home-icon-item">
+              <img src={offlineIcon} alt="Offline Translation" className="home-icon-image" />
+             
+            </div>
+          </div>
+
+          {/* Download Buttons */}
           <div className="home-download-buttons">
-            <button className="home-btn home-app-store">Download on the App Store</button>
-            <button className="home-btn home-play-store">Get it on Google Play</button>
+            <button className="home-btn home-app-store">
+              <img src={appStoreBadge} alt="App Store" />
+            </button>
+            <button className="home-btn home-play-store">
+              <img src={playStoreBadge} alt="Google Play Store" />
+            </button>
           </div>
         </div>
+
+        {/* Device Frame with Video */}
         <div className="mockup-video-device">
           <div className="mockup-video-device-frame">
-            <img
-              src={device} // Replace with your device frame path
-              alt="Device Frame"
-              className="mockup-frame"
-            />
+            <img src={deviceFrame} alt="Device Frame" className="mockup-frame" />
           </div>
           <div className="mockup-video-device-container">
             <video
@@ -55,49 +82,6 @@ const Home = () => {
           </div>
         </div>
       </header>
-
-      {/* Features Section */}
-      <section className="home-features">
-        <h2>More features you will love</h2>
-        <div className="home-feature-grid">
-          <div className="home-feature">
-            <img
-              src="feature-1-placeholder.jpg" /* Replace with your actual image */
-              alt="Feature 1"
-              className="home-feature-image"
-            />
-            <h3>100+ Languages</h3>
-            <p>Speak more than 100 languages instantly.</p>
-          </div>
-          <div className="home-feature">
-            <img
-              src="feature-2-placeholder.jpg" /* Replace with your actual image */
-              alt="Feature 2"
-              className="home-feature-image"
-            />
-            <h3>Voice Output</h3>
-            <p>Listen to translations in different voices & dialects.</p>
-          </div>
-          <div className="home-feature">
-            <img
-              src="feature-3-placeholder.jpg" /* Replace with your actual image */
-              alt="Feature 3"
-              className="home-feature-image"
-            />
-            <h3>Universal App</h3>
-            <p>One universal app for iPhone and iPad.</p>
-          </div>
-          <div className="home-feature">
-            <img
-              src="feature-4-placeholder.jpg" /* Replace with your actual image */
-              alt="Feature 4"
-              className="home-feature-image"
-            />
-            <h3>Translation History</h3>
-            <p>Access previous translations quickly and easily.</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
