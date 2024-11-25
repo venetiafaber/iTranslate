@@ -1,28 +1,26 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import SupportedLanguages from "./components/SupportedLanguages";
-
-import logo from "./assets/images/itranslate-logo.svg";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import LoginPage from "./components/LoginPage";
+import SignUpPage from "./components/SignUpPage";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="itranslate logo" />
-          <h1 className="text-center">Welcome to iTranslate</h1>
-        </header> */}
-
-        
-        {/* defines routes */}
-        <Routes>
-          <Route path="/supportedlanguages" element={<SupportedLanguages />} />
-        </Routes>
-
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/supported-languages" element={<SupportedLanguages />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
