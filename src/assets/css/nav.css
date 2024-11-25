@@ -278,10 +278,12 @@
   .nav-list {
     flex-direction: column;
     gap: 0;
+    opacity: 94%;
   }
 
   .nav-item {
     padding: 10px;
+    
   }
 
   .sign-in-item {
@@ -296,5 +298,7 @@
     top: 10%;
     left: 100%;
     z-index: 102;
+    /* background-color: var(--transparent); */
+    /* opacity: 90%; */
   }
 }
