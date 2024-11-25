@@ -15,7 +15,6 @@ import "../assets/css/SupportedLanguages.css";
 const SupportedLanguages = () => {
   return (
     <div class="supported-language-container">
-      <Header />
       <LanguageMap />
       <SearchLanguage />
       <ReviewsCarousel />
