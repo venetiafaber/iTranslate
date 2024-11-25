@@ -1,6 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-// Import images dynamically
+
 import deviceFrame from "../../src/assets/images/device_video_stencil_iphone11pro2x-p-800.png";
 import appStoreBadge from "../../src/assets/images/icons/badge_apple_app_store.svg";
 import playStoreBadge from "../../src/assets/images/icons/badge_google_play_store.svg";
@@ -8,10 +9,19 @@ import voiceIcon from "../../src/assets/images/vt.png";
 import cameraIcon from "../../src/assets/images/ct.png";
 import keyboardIcon from "../../src/assets/images/kt.png";
 import offlineIcon from "../../src/assets/images/ot.png";
+import textTranslationImage from "../../src/assets/images/feature_mockup_text_translation-p-500.png"
+import voiceTranslationImage from "../../src/assets/images/feature_mockup_voice_translation-p-500.png"
 
 import "../../src/assets/css/HomePage.css";
 
 const Home = () => {
+    {
+        const navigate = useNavigate(); 
+      
+        const handleNavigation = (path) => {
+          navigate(path); 
+        };
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -28,19 +38,15 @@ const Home = () => {
           <div className="home-icons-row">
             <div className="home-icon-item">
               <img src={voiceIcon} alt="Voice Translation" className="home-icon-image" />
-             
             </div>
             <div className="home-icon-item">
               <img src={cameraIcon} alt="Camera Translation" className="home-icon-image" />
-              
             </div>
             <div className="home-icon-item">
               <img src={keyboardIcon} alt="Keyboard Translation" className="home-icon-image" />
-             
             </div>
             <div className="home-icon-item">
               <img src={offlineIcon} alt="Offline Translation" className="home-icon-image" />
-             
             </div>
           </div>
 
@@ -82,8 +88,71 @@ const Home = () => {
           </div>
         </div>
       </header>
+
+      {/* Communicate Section */}
+      <section className="home-communicate">
+        <h2 className="home-communicate-title">
+          We enable everyone to <span>communicate in any language</span>
+        </h2>
+        <p className="home-communicate-desc">
+          iTranslate enables travelers, students, business professionals,
+          employers, and medical staff to read, write, and speak in over 100
+          languages, anywhere in the world.
+        </p>
+      </section>
+
+        {/* Text Translation Section */}
+        <section className="home-text-translation">
+        <div className="home-text-image">
+          <img
+            src={textTranslationImage}
+            alt="Text Translation Feature"
+            className="home-text-feature-image"
+          />
+        </div>
+        <div className="home-text-content">
+          <h2 className="home-text-title">Text Translation</h2>
+          <p className="home-text-desc">
+            With autocomplete and alternative translations, our text mode delivers
+            a state-of-the-art experience in more than 100 languages.
+          </p>
+          <button
+            className="home-btn-action"
+            onClick={() => handleNavigation("/translating/online-translator")}
+          >
+            Try Translation
+          </button>
+        </div>
+      </section>
+
+      {/* Voice Translation Section */}
+      <section className="home-voice-translation">
+        <div className="home-voice-content">
+          <h2 className="home-voice-title">Voice Translation</h2>
+          <p className="home-voice-desc">
+            Just start speaking, and iTranslate recognizes your voice and
+            translates it to your desired language.
+          </p>
+          <p className="home-voice-desc">
+            Now available offline in 4 languages!
+          </p>
+          <button
+            className="home-btn-action"
+            onClick={() => handleNavigation("/translating/online-translator")}
+          >
+            Try Voice Translation
+          </button>
+        </div>
+        <div className="home-voice-image">
+          <img
+            src={voiceTranslationImage}
+            alt="Voice Translation Feature"
+            className="home-voice-feature-image"
+          />
+        </div>
+      </section>
     </div>
   );
 };
-
+}
 export default Home;
