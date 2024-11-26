@@ -233,6 +233,7 @@
   }
   .nav-list.open {
     display: flex;
+    margin-top: 20px;
   }
   .sign-in-link {
     width: 100%;
