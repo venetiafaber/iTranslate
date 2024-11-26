@@ -1,0 +1,89 @@
+/*
+  Css  :     SupportPage.css
+  Created by      :     Abishek Priyan Kabilan
+  
+*/
+
+.support-page {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .support-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .support-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #242C33;
+  }
+  
+  .support-search {
+    padding: 0.8rem;
+    width: 60%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .support-search:focus {
+    border-color: #242C33;
+    outline: none;
+    box-shadow: 0 0 5px rgba(75, 0, 165, 0.5);
+  }
+  
+  .support-explore {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #666;
+  }
+  
+  .support-explore span {
+    color: ;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .support-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .support-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .support-icon {
+    font-size: 3rem;
+    color: var(--itranslate-blue);
+    margin-bottom: 1rem;
+  }
+  
+  .support-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .support-card-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,109 @@
+/*
+  CSS for         :     ReviewsCarousel.js
+  Created by      :     Venetia Faber
+  
+*/
+
+:root {
+  --white: white;
+  /* --itranslate-blue: #1a98ff; */
+  --itranslate-blue: #0654b3;
+  --ultralight-gray: #f2f5f7;
+  --light-gray: #d2d6d9;
+  --medium-gray: #919699;
+  --dark-gray: #444444;
+  --soft-white: #FFFFFF;
+  --superlight-gray: #e3e6e8;
+  --typeright-purple: #73f;
+  --voice-purple: #b367ff;
+  --light-blue: #59ecff;
+  --black: black;
+  --typeright-teal: #00c6d9;
+  --transparent-blue: #1a98ff26;
+}
+
+.reviews-carousel-container {
+  /* background-color: #f9fafb; */
+  background-color: #cecdcd;
+  /* background-image: linear-gradient(to right, #827ffa, #21e4e6); */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  text-align: center;
+}
+
+.reviews-carousel-container h3 {
+  letter-spacing: 0.62px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: SF Pro Display, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: var(--itranslate-blue);
+}
+
+.review-card {
+  font-size: 18px;
+  color: var(--dark-gray);
+  padding: 20px;
+  font-family: SF Pro Display, sans-serif;
+  /* background-image: linear-gradient(to right, #827ffa, #21e4e6); */
+}
+
+.review-card h5 {
+  font-size: 16px;
+  /* color: #007bff; */
+  color: var(--typeright-purple);
+  margin-top: 10px;
+}
+
+.rating {
+  margin: 20px auto;
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; 
+  filter: invert(34%) sepia(81%) saturate(431%) hue-rotate(201deg) brightness(95%) contrast(96%); 
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: ''; 
+  border-style: solid;
+  border-width: 8px 8px 0 0; 
+  color: var(--itranslate-blue);
+  font-size: 24px;
+} */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent;
+  filter: none;
+  color: var(--itranslate-blue);
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  font-size: 24px;
+  color: var(--itranslate-blue);
+  border-color: var(--itranslate-blue) transparent transparent transparent;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  font-size: 24px;
+  color: var(--itranslate-blue);
+}
+
+.carousel-indicators {
+  color: var(--itranslate-blue) !important;
+}
