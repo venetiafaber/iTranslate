@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NotFoundPage from "./components/NotFoundPage";
 import Home from "./components/HomePage";
+import SupportPage from "./components/supportPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/support" element={<SupportPage/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/supported-languages" element={<SupportedLanguages />} />
