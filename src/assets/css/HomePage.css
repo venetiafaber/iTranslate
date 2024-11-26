@@ -1,3 +1,15 @@
+/*
+  css :     Homepage.css
+  Created by      :     Abishek Priyan Kabilan
+  
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .home-header {
     background: linear-gradient(
       to bottom,
@@ -352,3 +364,81 @@
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   }
+
+
+  @media (max-width: 768px) {
+
+
+    .home-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .home-title {
+        font-size: 2rem;
+        display:none;
+    }
+
+    .home-subtitle{
+        display: none;
+    }
+
+    .home-review-author{
+        display: none;
+    }
+
+    .home-icons-row{
+        flex-direction: column;
+    }
+
+    .home-stars {
+        font-size: 1rem;
+        display:none;
+
+    }
+
+    .home-btn img {
+        max-width: 100px;
+        
+    }
+
+    .mockup-video-device {
+        max-width: 220px;
+        margin-bottom: 500px;
+    }
+
+    .mockup-frame{
+        width: 100%;
+    }
+
+    .mockup-video-device-frame{
+        height: auto;
+    }
+
+    .mockup-video-device-container{
+       max-width: 100%;
+       height: auto;
+    }
+
+    .mockup-video-device{
+        height: auto;
+    }
+
+    .home-text-title,
+    .home-voice-title {
+        font-size: 1.3rem;
+    }
+
+    .home-text-desc,
+    .home-voice-desc {
+        font-size: 0.9rem;
+    }
+
+    .home-text-translation,
+    .home-voice-translation {
+        padding: 2rem 1rem;
+    }
+
+    .home-communicate {
+        padding: 2rem 1rem;
+    }
+}

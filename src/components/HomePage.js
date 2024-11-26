@@ -1,7 +1,14 @@
+/*
+  React Component :     Homepage.js
+  Created by      :     Abishek Priyan Kabilan
+  
+*/
+
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
+// Import images dynamically
 import deviceFrame from "../../src/assets/images/device_video_stencil_iphone11pro2x-p-800.png";
 import appStoreBadge from "../../src/assets/images/icons/badge_apple_app_store.svg";
 import playStoreBadge from "../../src/assets/images/icons/badge_google_play_store.svg";
